@@ -57,11 +57,7 @@ if inpSizing == '1':
         mainURL = 'https://www.hibbett.com'
         adultLink = 'https://www.hibbett.com/product?pid={}&dwvar_{}_size=0{}&dwvar_{}_color={}'.format(Pid, Pid, size ,Pid ,Color)
         
-        payload = {
-            "dwvar_1P145_color": "1000",
-            "cgid": "men"
         
-        }
         s = requests.Session()
         r = s.get(adultLink, timeout=30, headers= user_agent, verify=False)
         time.sleep(3)
@@ -100,11 +96,6 @@ else:
         for gsSize in gsSized:
             gsLink = 'https://www.hibbett.com/product?pid={}&dwvar_{}_size=0{}&dwvar_{}_color={}'.format(Pid, Pid, gsSize ,Pid ,Color)
 
-            payload = {
-                "dwvar_1P145_color": "1000",
-                "cgid": "men"
-            
-            }
             s = requests.Session()
             r = s.get(gsLink, timeout=30, headers= user_agent, verify=False)
             print("Finding Variant..")
