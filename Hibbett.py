@@ -1,5 +1,3 @@
-#https://www.hibbett.com/product?pid=8P872&dwvar_8P872_size=0090&dwvar_8P872_color=1370
-# variant for size 8 : 44326536
 import time
 import colorama
 import requests 
@@ -19,15 +17,6 @@ gsSized = ['035', '040', '045', '050', '055', '060', '065', '070']
 
 ####################################################
 
-proxyRaw = '11.111.11.1:1111:aaaa:aaaaabbbbaaaa'
-host = proxyRaw.split(':')[0]
-port = proxyRaw.split(':')[1]
-user = proxyRaw.split(':')[2]
-password = proxyRaw.split(':')[3]
-
-proxy = { 'http' : ('http://{}:{}@{}:{}').format(user, password, host, port)}
-
-# user agent to stop intstant flag my permiterX
 user_agent = {'User-agent': 'Mozilla/5.0'}
 
 ####################################################
@@ -77,15 +66,6 @@ if inpSizing == '1':
         data = soup(r.content, 'html.parser')
         time.sleep(3)
 
-
-    # Working on finding if PX Blocks IP
-        #print(data)
-        #pxBlock = data.find_all('a')
-        #print(pxBlock)
-        # if pxBlock('href') == "https://www.perimeterx.com/whywasiblocked":
-        #         print('Blocked')
-
-
         soupVar = data.find_all('input', attrs= {"name": "pid"})
         trueSizing = size[0]+ size[1] + "." + size[2]
         for value in soupVar:
@@ -128,12 +108,6 @@ else:
             data = soup(r.content, 'html.parser')
             time.sleep(3)
 
-        # Working on finding if PX Blocks IP
-            #print(data)
-            #pxBlock = data.find_all('a')
-            #print(pxBlock)
-            # if pxBlock('href') == "https://www.perimeterx.com/whywasiblocked":
-            #         print('Blocked')
 
             soupVar = data.find_all('input', attrs= {"name": "pid"})
             soupTitle = data.find_all('div', attrs={"class":"product-name"})
