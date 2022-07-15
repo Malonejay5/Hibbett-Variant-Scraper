@@ -24,7 +24,7 @@ user_agent = {'User-agent': 'Mozilla/5.0'}
 # USER INPUTS
 
 print("----------------------------------------------------")
-print(Fore.CYAN + "Hibbett Variant Scraper For Filipi Bot" + " " + Fore.GREEN +"v.1.0.0")
+print(Fore.CYAN + "Hibbett Variant Scraper For Filipi Bot" + " " + Fore.GREEN +"v.1.0.1")
 print("----------------------------------------------------")
 inpPID = input(Fore.LIGHTCYAN_EX + 'Enter PID,COLOR'+Fore.WHITE +': ')
 print("---------------")
@@ -46,6 +46,8 @@ if inpSizing == '1':
 
     variantTXT = open(inpTitle +'.txt', 'a')
     variantTXT.write(inpTitle)
+    variantTXT.write("\n")
+    variantTXT.write(inpPID)
     variantTXT.write("\n")
 
     print("Finding Variants...")
@@ -90,6 +92,8 @@ else:
 
         variantTXT = open(inpTitle +'.txt', 'a')
         variantTXT.write(inpTitle)
+        variantTXT.write("\n")
+        variantTXT.write(inpPID)
         variantTXT.write("\n")
 
             # Single singe size out of size group
