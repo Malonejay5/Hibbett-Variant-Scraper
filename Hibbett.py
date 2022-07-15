@@ -61,7 +61,7 @@ if inpSizing == '1':
         
         }
         s = requests.Session()
-        r = s.get(adultLink, timeout=30, headers= user_agent, data=payload, verify=False)
+        r = s.get(adultLink, timeout=30, headers= user_agent, verify=False)
         time.sleep(3)
         data = soup(r.content, 'html.parser')
         time.sleep(3)
