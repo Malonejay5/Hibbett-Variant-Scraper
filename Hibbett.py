@@ -28,7 +28,7 @@ user_agent = {'User-agent': 'Mozilla/5.0'}
 # USER INPUTS
 
 print("----------------------------------------------------")
-print(Fore.CYAN + "Hibbett Variant Scraper For Filipi Bot" + " " + Fore.GREEN +"v.1.0.0")
+print(Fore.CYAN + "Hibbett Variant Scraper For Filipi Bot" + " " + Fore.GREEN +"v.1.0.2")
 print("----------------------------------------------------")
 inpPID = input(Fore.LIGHTCYAN_EX + 'Enter PID,COLOR'+Fore.WHITE +': ')
 print("---------------")
